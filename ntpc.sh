@@ -33,7 +33,7 @@ case $key in
     shift # past argument
     shift # past value
     ;;
-    -ip|pAddress)
+    -ip)
     IP="$2"
     shift # past argument
     shift # past value
