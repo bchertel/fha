@@ -96,7 +96,7 @@ fi
 
 if [ "${ROLE}" = "C" ]; then
    echo "server ${IP}" >> /etc/ntp.conf
-   #service ntp restart
+   service ntp restart
    echo "CLIENT: CONFIGURED" >&2
 elif [ "${ROLE}" = "S" ]; then
     echo "server 0.debian.pool.ntp.org iburst" >> /etc/ntp.conf
@@ -104,7 +104,7 @@ elif [ "${ROLE}" = "S" ]; then
     echo "server 2.debian.pool.ntp.org iburst" >> /etc/ntp.conf
     echo "server 3.debian.pool.ntp.org iburst" >> /etc/ntp.conf
     echo "broadcast ${IP}" >> /etc/ntp.conf
-    #service ntp restart
+    service ntp restart
     echo "SERVER: CONFIGURED" >&2
 else
     echo "NO ROLE: CONFIGURED" >&2
