@@ -2,11 +2,11 @@
 
 # Bare bones Bash script to help config server/clint side NTP
 
-#Must be executed with sudo permissions
-# if ! [ $(id -u) = 0 ]; then
-#    echo "The script need to be run as root." >&2
-#    exit 1
-# fi
+# Must be executed with sudo permissions
+if ! [ $(id -u) = 0 ]; then
+   echo "The script need to be run as root." >&2
+   exit 1
+fi
 
 
 #parse args
